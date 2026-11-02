@@ -47,6 +47,15 @@
   font: 700 13px 'Manrope', sans-serif;
 }
 
+.book-card {
+  cursor: pointer;
+}
+
+.book-card:focus-visible {
+  outline: 3px solid #166b5080;
+  outline-offset: 3px;
+}
+
 .results-heading span {
   overflow: hidden;
   color: var(--muted);
@@ -148,6 +157,202 @@
   border-color: #aebfb4;
 }
 
+.login-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: white;
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.login-button:hover,
+.secondary-button:hover {
+  border-color: #aebfb4;
+  background: #f8faf7;
+}
+
+.profile-help,
+.profile-fields small {
+  display: block;
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.profile-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  padding: 23px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.profile-fields > label,
+.profile-campus {
+  display: block;
+  min-width: 0;
+}
+
+.profile-fields > label > span,
+.profile-campus > span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 8px;
+  color: #43564d;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.profile-fields input,
+.profile-fields select,
+.modal select {
+  width: 100%;
+  min-height: 40px;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: white;
+  color: var(--ink);
+}
+
+.profile-campus {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: #fbfcfa;
+}
+
+.profile-campus p {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.donation-explainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 17px;
+  margin-bottom: 17px;
+  border: 1px solid #dce8df;
+  border-radius: 5px;
+  background: #f0f6f1;
+}
+
+.donation-explainer strong,
+.details-section h3 {
+  font: 700 13px 'Manrope', sans-serif;
+}
+
+.donation-explainer p {
+  max-width: 650px;
+  margin: 5px 0 0;
+  color: #5a685f;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.campus-results-note {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.book-details {
+  display: grid;
+  gap: 17px;
+}
+
+.details-summary {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+}
+
+.details-summary .cover {
+  height: 125px;
+  border-radius: 4px;
+}
+
+.details-summary p {
+  margin: 6px 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.details-summary p strong {
+  color: var(--ink);
+  font-size: 16px;
+}
+
+.details-section {
+  padding-top: 13px;
+  border-top: 1px solid var(--line);
+}
+
+.details-section h3 {
+  margin: 0 0 6px;
+}
+
+.details-section > p {
+  margin: 0;
+  color: #5b6860;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.details-section .details-note {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.details-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 9px;
+  padding-top: 4px;
+}
+
+.prototype-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 11px;
+  border: 1px solid #eadcbd;
+  border-radius: 4px;
+  background: #fff8e9;
+  color: #6a5835;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.prototype-notice svg {
+  flex: 0 0 auto;
+  margin-top: 1px;
+}
+
 @media (max-width: 650px) {
   .topbar {
     height: auto;
@@ -175,6 +380,23 @@
 
   .profile-actions {
     grid-template-columns: 1fr;
+  }
+
+  .profile-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .donation-explainer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .top-actions {
+    gap: 8px;
+  }
+
+  .campus {
+    display: none;
   }
 
   .profile-stats strong {

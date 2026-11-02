@@ -23,4 +23,6 @@ npm run build
 npm run preview
 ```
 
-Saved books and user-created listings are stored in browser local storage. Seller messages and waitlists are prototype interactions and are not connected to a backend.
+Saved books, profile details, and user-created listings are stored in browser local storage. Seller messages and waitlists are prototype interactions and are not connected to a backend.
+
+The university sign-in is also a UI prototype: it checks the selected demo campus email domain but does not verify identity or connect to a university single sign-on provider. Add a trusted authentication backend before using it for real student access.
